@@ -1,6 +1,6 @@
 {
   "name": "@apim/auth0-lock-redux",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "description": "Auth Lock Redux Middleware",
   "author": "Luis Gomez <lgomez@gmail.com> (http://luis.io)",
