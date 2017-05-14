@@ -112,37 +112,26 @@ createLogger({
 ```javascript
 // [TODO] Some initialization may be added in the future.
 const INITIALIZE = '@@auth0Lock/INITIALIZE'
-
 // Trigger authentication.
 const AUTHENTICATE = '@@auth0Lock/AUTHENTICATE'
-
 // When profile is received.
 const PROFILE = '@@auth0Lock/PROFILE'
-
 // When profile load fails.
 const PROFILE_ERROR = '@@auth0Lock/PROFILE_ERROR'
-
 // [TODO] Dispatched when token revoked (aka: sign out)
 const REVOKED = '@@auth0Lock/REVOKED'
-
 // [TODO] Dispatched when token is checked.
 const CHECK = '@@auth0Lock/CHECK'
-
 // Dispatched when sign in form is shown.*
 const SHOW = '@@auth0Lock/SHOW'
-
 // Dispatched when sign in form is hidden.*
 const HIDE = '@@auth0Lock/HIDE'
-
 // Dispatched when lock emits an unrecoverable_error.*
 const UNRECOVERABLE_ERROR = '@@auth0Lock/UNRECOVERABLE_ERROR'
-
 // Dispatched when token is received.*
 const AUTHENTICATED = '@@auth0Lock/AUTHENTICATED'
-
 // Dispatched when authentication fails.*
 const AUTHORIZATION_ERROR = '@@auth0Lock/AUTHORIZATION_ERROR'
-
 // Dispatched when a hash parse attempt is done.*
 const HASH_PARSED = '@@auth0Lock/HASH_PARSED'
 ```
