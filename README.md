@@ -13,12 +13,12 @@ npm install --save @apim/auth0-lock-redux
 
 ## Features
 
-0. Use your own action to trigger authentication by passing the right meta information.
-0. Right after authentication, the user's profile is fetched automatically and made available for reduction. Use the bundled reducer to grab the full profile or write your own.
-0. Auth0 Lock first gives us an authentication payload (with the token and auth-only data) and then gives us profile data (via another call). This middleware returns both in one object by moving the auth object to be under `profile.auth`
-0. All Auth0 Lock events are mapped to actions. Only "authenticated" is really being used but I am planning to add more.
-0. Nicely formatted for `redux-logger`.
-0. I intentionally leave out any routing changes and localStorage. Use your own middleware to do either. Yes, I consider this a feature.
+* Use your own action to trigger authentication by passing the right meta information.
+* Right after authentication, the user's profile is fetched automatically and made available for reduction. Use the bundled reducer to grab the full profile or write your own.
+* Auth0 Lock first gives us an authentication payload (with the token and auth-only data) and then gives us profile data (via another call). This middleware returns both in one object by moving the auth object to be under `profile.auth`
+* All Auth0 Lock events are mapped to actions. Only "authenticated" is really being used but I am planning to add more.
+* Nicely formatted for `redux-logger`.
+* I intentionally leave out any routing changes and localStorage. Use your own middleware to do either. Yes, I consider this a feature.
 
 ## Usage
 ### Middleware Setup
@@ -40,7 +40,7 @@ const middlewares = [
 // Apply as usual
 applyMiddleware(...middlewares)
 ```
-Alternatively, if you already have an instance of `auth0-lock` with your settings, passe the instance and it'll be used instead:
+Alternatively, if you already have an instance of `auth0-lock` with your settings, pass the instance and it'll be used instead:
 ```javascript
 import Auth0Lock from 'auth0-lock'
 import auth0LockReduxMiddleware from '@apim/auth0-lock-redux'
@@ -94,7 +94,7 @@ const user = handleActions({
 }, state.user)
 
 ```
-### Reduce noice in `redux-logger`
+### Reduce noise in `redux-logger`
 Add a reducer to reduce the received user profile. You have two options:
 ```javascript
 // Collapse these entries...
@@ -106,24 +106,4 @@ createLogger({
 createLogger({
   predicate: (getState, action) => !/router/.test(action.type)
 });
-```
-#### Add your own reducer to the PROFILE action:
-This lets you customize the reduction. I'm using `redux-actions` in this example.
-```javascript
-import {
-  AUTHENTICATED,
-  REVOKED,
-  PROFILE,
-  auth0LockReducer
-} from '@apim/auth0-lock-redux'
-
-const user = handleActions({
-  [REVOKED]: () => null,
-  [PROFILE]: (state, action) => ({
-    ...state,
-    token: action.payload.auth.accessToken, // Grab only the token
-    name: action.payload.name // ...and the user's name
-  })
-}, state.user)
-
 ```
