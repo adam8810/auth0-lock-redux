@@ -1,5 +1,5 @@
 # auth0-lock-redux
-<!-- [![npm version](https://img.shields.io/npm/v/@apim/auth0-lock-redux.svg?style=flat-square)](https://www.npmjs.com/package/@apim/auth0-lock-redux) [![npm downloads](https://img.shields.io/npm/dm/@apim/auth0-lock-redux.svg?style=flat-square)](https://www.npmjs.com/package/@apim/auth0-lock-redux) [![build status](https://img.shields.io/travis/reactjs/@apim/auth0-lock-redux/master.svg?style=flat-square)](https://travis-ci.org/reactjs/@apim/auth0-lock-redux) -->
+[![npm](https://img.shields.io/npm/dt/@apim/auth0-lock-redux.svg)](https://www.npmjs.com/package/@apim/auth0-lock-redux) [![GitHub issues](https://img.shields.io/github/issues/apim-io/auth0-lock-redux.svg)](https://github.com/apim-io/auth0-lock-redux/issues) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/apim-io/auth0-lock-redux/master/LICENSE)
 
 > Auth Lock Redux Middleware
 
