@@ -110,18 +110,40 @@ createLogger({
 
 ### Constants
 ```javascript
-const INITIALIZE = '@@auth0Lock/INITIALIZE' // [TODO] Some initialization may be added in the future.
-const AUTHENTICATE = '@@auth0Lock/AUTHENTICATE' // Trigger authentication.
-const PROFILE = '@@auth0Lock/PROFILE' // When profile is received.
-const PROFILE_ERROR = '@@auth0Lock/PROFILE_ERROR' // When profile load fails.
-const REVOKED = '@@auth0Lock/REVOKED' // [TODO] Dispatched when token revoked (aka: sign out)
-const CHECK = '@@auth0Lock/CHECK' // [TODO] Dispatched when token is checked.
-const SHOW = '@@auth0Lock/SHOW' // Dispatched when sign in form is shown.*
-const HIDE = '@@auth0Lock/HIDE' // Dispatched when sign in form is hidden.*
-const UNRECOVERABLE_ERROR = '@@auth0Lock/UNRECOVERABLE_ERROR' // Dispatched when lock emits an unrecoverable_error.*
-const AUTHENTICATED = '@@auth0Lock/AUTHENTICATED' // Dispatched when token is received.*
-const AUTHORIZATION_ERROR = '@@auth0Lock/AUTHORIZATION_ERROR' // Dispatched when authentication fails.*
-const HASH_PARSED = '@@auth0Lock/HASH_PARSED' // Dispatched when a hash parse attempt is done.*
+// [TODO] Some initialization may be added in the future.
+const INITIALIZE = '@@auth0Lock/INITIALIZE'
 
-* Note: these are straight maddings of Auth0 Lock's own events. See their docs.
+// Trigger authentication.
+const AUTHENTICATE = '@@auth0Lock/AUTHENTICATE'
+
+// When profile is received.
+const PROFILE = '@@auth0Lock/PROFILE'
+
+// When profile load fails.
+const PROFILE_ERROR = '@@auth0Lock/PROFILE_ERROR'
+
+// [TODO] Dispatched when token revoked (aka: sign out)
+const REVOKED = '@@auth0Lock/REVOKED'
+
+// [TODO] Dispatched when token is checked.
+const CHECK = '@@auth0Lock/CHECK'
+
+// Dispatched when sign in form is shown.*
+const SHOW = '@@auth0Lock/SHOW'
+
+// Dispatched when sign in form is hidden.*
+const HIDE = '@@auth0Lock/HIDE'
+
+// Dispatched when lock emits an unrecoverable_error.*
+const UNRECOVERABLE_ERROR = '@@auth0Lock/UNRECOVERABLE_ERROR'
+
+// Dispatched when token is received.*
+const AUTHENTICATED = '@@auth0Lock/AUTHENTICATED'
+
+// Dispatched when authentication fails.*
+const AUTHORIZATION_ERROR = '@@auth0Lock/AUTHORIZATION_ERROR'
+
+// Dispatched when a hash parse attempt is done.*
+const HASH_PARSED = '@@auth0Lock/HASH_PARSED'
 ```
+* Note: these are straight maddings of Auth0 Lock's own events. See their docs.
