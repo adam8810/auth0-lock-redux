@@ -135,4 +135,4 @@ const AUTHORIZATION_ERROR = '@@auth0Lock/AUTHORIZATION_ERROR'
 // Dispatched when a hash parse attempt is done.*
 const HASH_PARSED = '@@auth0Lock/HASH_PARSED'
 ```
-* Note: these are straight maddings of Auth0 Lock's own events. See their docs.
+**Note:** these are straight mappings of Auth0 Lock's own events. See their docs.
